@@ -14,8 +14,14 @@ function App() {
   };
   //funcion calcular resultado
   const calcularResultado = () => {
-    if (input) {
-      setInput(evaluate(input));
+    try {
+      if (input) {
+        setInput(evaluate(input));
+      } else {
+        alert("No hay números");
+      }
+    } catch (error) {
+      alert("Operación incorrecta");
     }
   };
 
